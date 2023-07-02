@@ -16,7 +16,10 @@ body {
   font-style: normal;
   font-weight: 400;
 }
-
+#message{
+  font-family: 'Inter';
+  font-weight: bolder;
+}
 .wrapper {
   display: flex;
   width: 100%;

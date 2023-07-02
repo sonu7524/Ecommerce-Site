@@ -14,6 +14,10 @@ body {
   justify-content: space-between; 
 }
 
+#message{
+  font-family: 'Inter';
+}
+
 .text-style {
   font-family: "Inter";
   font-style: normal;

@@ -4,6 +4,7 @@ let lastName = document.querySelector("#last-name");
 let email = document.querySelector("#email");
 let pass = document.querySelector("#password");
 let confPass = document.querySelector("#conf-password");
+var message = document.getElementById('message');
 let userArray = [];
 let emailArray = [];
 
@@ -31,8 +32,13 @@ form.addEventListener("submit", (event) => {
       emailArray.push(email.value);
       localStorage.setItem("userEmails", JSON.stringify(emailArray));
 
-      alert("Your account has been added");
-      location.href = "../HTML/login.html";
+      message.textContent = "Your account has been added!!";
+      message.style.color = "green";
+
+      setInterval(()=>{
+        location.href = "../HTML/login.html";
+      },2000);
+      
     } else {
       if (!userExists(email.value)) {
         let tempArr = JSON.parse(localStorage.getItem("usersData"));
@@ -42,16 +48,22 @@ form.addEventListener("submit", (event) => {
         let emArray = JSON.parse(localStorage.getItem("userEmails"));
         emArray.push(email.value);
         localStorage.setItem("userEmails", JSON.stringify(emArray));
+        message.textContent = "Your account has been added!!";
+      message.style.color = "green";
 
-        alert("Your account has been added");
-        location.href = "../HTML/login.html";
+      setInterval(()=>{
+        location.href = "../HTML/login.html";;
+      },2000);
+        
       } else {
-        alert(`User with Email-id : ${email.value} already exists!`);
+        message.textContent = `User with Email-id : ${email.value} already exists!`;
+        message.style.color = "red";
         form.reset();
       }
     }
   } else {
-    alert("Two passwords doesnot match!!!");
+    message.textContent = "Password and Confirm password does not match!!!";
+        message.style.color = "red";
     form.reset();
   }
 });
@@ -60,7 +72,7 @@ form.addEventListener("submit", (event) => {
 function userExists(email) {
   let tempEmail = JSON.parse(localStorage.getItem("userEmails"));
   let mail = tempEmail.find(m => m === email )
-  if(m) return true;
+  if(mail) return true;
   return false;
 }
 

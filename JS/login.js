@@ -1,6 +1,7 @@
 let form = document.querySelector(".form");
 let email = document.querySelector("#email");
 let pass = document.querySelector("#password");
+var message = document.getElementById('message');
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -8,14 +9,22 @@ form.addEventListener("submit", (event) => {
   if (userEmailExists(email.value)) {
     if (userPassCorrect(email.value, pass.value)) {
       localStorage.setItem("currentUser", email.value);
-      location.replace("../HTML/shop.html");
+      message.textContent = "Login Sucessful!";
+      message.style.color = "green";
+      setInterval(()=>{
+        location.replace("../HTML/shop.html");
+      },2000);
     } else {
-      alert("Please enter the correct password!!!");
+      message.textContent = "Please enter the correct password!";
+      message.style.color = "red";
       form.reset();
     }
   } else {
-    alert("Email-id does not exist.\nPlease sign-up with us!!!");
-    location.href = "../index.html";
+    message.textContent = "Account not exist redirecting you to signup page...!";
+    message.style.color = "red";
+    setInterval(()=>{
+      location.href = "../index.html";
+    },2000);
   }
 });
 
