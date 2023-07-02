@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home-Collection Store</title>
+    <!-- linking the favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/shopping_icon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Linking the shop css file  -->
+    <link rel="stylesheet" href="../CSS/shop.css" />
+
+    <!-- linking the navbar css file -->
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+
+    <!-- linking the shop js file -->
+    <script src="../JS/shop.js" defer></script>
+
+    <!-- linking the navbar js file -->
+    <script src="../JS/navbar.js" defer></script>
+  </head>
+  <body>
+    <div class="root">
+      <!-- navbar -->
+      <nav class="navbar text-style">
+        <div id="logo-box">
+          <div class="material-symbols-outlined" id="menus">menu</div>
+          <div id="logo">Collection Store</div>
+          <div class="material-symbols-outlined" id="filterBtn" style="color: white;">filter_alt</div>
+        </div>
+        
+        <div id="links">
+          <div id="home"><a href="../HTML/shop.html">Home</a></div>
+
+          <div id="my-cart"><a href="../HTML/cart.html">My Cart</a></div>
+          
+
+          <div class="userTag">
+            <!-- <div class="material-symbols-outlined">person</div> -->
+            <div id="userName" style="align-self: flex-end"></div>
+          </div>
+          <div class="material-symbols-outlined" id="logout">logout</div>
+        </div>
+      </nav>
+
+      <!-- shoping portal -->
+      <div class="shopUI">
+        <!-- side bar for filters -->
+        <div class="sideBar text-style">
+          <div class="color">
+            <h1>Colors</h1>
+            <div>
+              <input
+                type="checkbox"
+                name="color-red"
+                id="color-red"
+                form="dummy"
+              />
+              <label for="color-red">Red</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="color-blue"
+                id="color-blue"
+                form="dummy"
+              />
+              <label for="color-blue">Blue</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="color-green"
+                id="color-green"
+                form="dummy"
+              />
+              <label for="color-green">Green</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="color-black"
+                id="color-black"
+                form="dummy"
+              />
+              <label for="color-black">Black</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="color-orange"
+                id="color-orange"
+                form="dummy"
+              />
+              <label for="color-orange">Orange</label>
+            </div>
+          </div>
+          <div class="size">
+            <h1>Sizes</h1>
+            <div>
+              <input
+                type="checkbox"
+                name="size-small"
+                id="size-small"
+                form="dummy"
+              />
+              <label for="size-small">S</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="size-medium"
+                id="size-medium"
+                form="dummy"
+              />
+              <label for="size-medium">M</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="size-large"
+                id="size-large"
+                form="dummy"
+              />
+              <label for="size-large">L</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="size-extra-large"
+                id="size-extra-large"
+                form="dummy"
+              />
+              <label for="size-extra-large">XL</label>
+            </div>
+          </div>
+          <div class="rating">
+            <h1>Rating</h1>
+            <div>
+              0
+              <input
+                type="range"
+                name="rating-range"
+                id="rating-range"
+                max="5"
+                min="0"
+                step="0.1"
+                style="width: 50%"
+                form="dummy"
+              />
+              <span id="ratingValue"></span>
+            </div>
+          </div>
+          <div class="price">
+            <h1>Price Range</h1>
+            <div>
+              <input
+                type="checkbox"
+                name="price0to25"
+                id="price0to25"
+                form="dummy"
+              />
+              <label for="price0to25">$0 to $25</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price26to50"
+                id="price26to50"
+                form="dummy"
+              />
+              <label for="price26to50">$26 to $50</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price51to100"
+                id="price51to100"
+                form="dummy"
+              />
+              <label for="price51to100">$51 to $100</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="price101Above"
+                id="price101Above"
+                form="dummy"
+              />
+              <label for="price101Above">$101 onwards</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- div to render the  products available -->
+        <div class="productSide">
+          <!-- search bar -->
+          <div class="search">
+            <div class="material-symbols-outlined" style="align-self: center">
+              search
+            </div>
+            <div class="inputDiv">
+              <input
+                type="search"
+                name="prodSearch"
+                id="prodSearch"
+                placeholder="Search"
+              />
+            </div>
+          </div>
+
+          <!-- filter tag -->
+          <div class="filterTags text-style">
+            <div class="all">All</div>
+            <div class="men">Mens</div>
+            <div class="women">Womens</div>
+            <div class="jewellery">Jewellery</div>
+            <div class="electronics">Electronics</div>
+          </div>
+
+          <!-- Products will be rendered category wise. Seperate div for seperate category -->
+          <div class="menSection text-style">
+            <h1>Men's Clothing</h1>
+            <div class="menProduct productBoard"></div>
+          </div>
+          <div class="womenSection text-style">
+            <h1>Women's Clothing</h1>
+            <div class="womenProduct productBoard"></div>
+          </div>
+          <div class="electronicSection text-style">
+            <h1>Electronic's</h1>
+            <div class="electronicProduct productBoard"></div>
+          </div>
+          <div class="jewellerySection text-style">
+            <h1>Jewellery</h1>
+            <div class="jewelleryProduct productBoard"></div>
+          </div>
+          <div class="results text-style"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This div will be displayed if and only if the user view this website in mobiles.
+         It will show the small floated filter button at the bottom right which will toggle 
+         openeing and closing of the sidebar -->
+    <div class="filter-For-Mobiles">
+      <img src="https://icons.iconarchive.com/icons/fatcow/farm-fresh/32/filter-icon.png" width="32" height="32" style="border: 2px solid black; border-radius: 50%;background-color: black; padding: 5px;"/>
+    </div>
+    <footer>
+      <p>&copy Collection Store</p>
+      <p>Designed By Sonu Daryani</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.text-style {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+footer{
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper2 {
+  width: 90%;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 100;
+}
+
+.wrapper2 > h1 {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 900;
+}
+
+.form {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form > input {
+  border: 2px solid black;
+  font-size: 1rem;
+  padding: 0.5rem;
+  outline: none;
+  /* border-radius: 10px; */
+  color: black;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+.form > input:read-write {
+  border: 2px solid black;
+  font-size: 1rem;
+  padding: 0.9rem;
+  outline: none;
+  /* border-radius: 10px; */
+  background-color: transparent;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+#submitBtn {
+  width: 9rem;
+  background-color: black;
+  color: white;
+  /* border-radius: 10px; */
+}
+
+@media screen and (max-width: 1000px), (max-height: 700px) {
+  .wrapper,
+  .wrapper2 {
+    width: 100%;
+  }
+
+  .wrapper {
+    padding-top: 73px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .wrapper2 > h1 {
+    font-size: 1.5rem;
+  }
+  .form > input {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .form > input:read-write {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}

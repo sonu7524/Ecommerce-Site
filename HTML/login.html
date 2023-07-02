@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Collection Store.</title>
+
+    <!-- <link rel="shortcut icon" href="./images/login_icon.png" /> -->
+
+    <!-- linking the login css -->
+    <link rel="stylesheet" href="../CSS/login.css" />
+
+    <!-- Linking the navbar css -->
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+
+    <!-- Linking the login js -->
+    <script src="../JS/login.js" defer></script>
+
+    <!-- linking the navbar js -->
+    <script src="../JS/navbar.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar text-style">
+        <div id="logo-box">
+          <div class="material-symbols-outlined" id="menus">menu</div>
+          <div id="logo">Collection Store</div>
+        </div>
+        <div id="links">
+          <div id="home"><a href="../index.html">Home</a></div>
+          <div id="login"><a href="../HTML/login.html">Login</a></div>
+          <div id="signup"><a href="../HTML/signup.html">SignUp</a></div>
+        </div>
+      </nav>
+      <div class="wrapper2">
+        <h1 class="text-style">Login</h1>
+        <form class="form text-style">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+            autocomplete="email"
+          />
+          <input type="password" name="password" id="password" placeholder="Password" required autocomplete="current-password"/>
+          <input type="submit" value="Log in" id="submitBtn" />
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>&copy Collection Store</p>
+      <p>Designed By Sonu Daryani</p>
+    </footer>
+  </body>
+</html>

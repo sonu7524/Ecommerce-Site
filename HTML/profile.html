@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - Collection Store</title>
+
+    <!-- <link rel="shortcut icon" href="./images/user_icon.png" /> -->
+
+    <!-- linking the profile css -->
+    <link rel="stylesheet" href="../CSS/profile.css" />
+
+    <!-- Linking the navbar css -->
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+
+    <!-- Linking the profile js -->
+    <script src="../JS/profile.js" defer></script>
+
+    <!-- linking the navbar js -->
+    <script src="../JS/navbar.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar text-style">
+        <div id="logo-box">
+          <div class="material-symbols-outlined" id="menus">menu</div>
+          <div id="logo">Collection Store</div>
+        </div>
+        <div id="links">
+          <div id="home"><a href="../HTML/shop.html">Home</a></div>
+          <div id="cart"><a href="../HTML/cart.html">My Cart</a></div>
+          <!-- <div id="profile"><a href="../HTML/profile.html">Profile</a></div> -->
+        </div>
+      </nav>
+      <div class="wrapper2">
+        <h1 class="text-style">My Profile</h1>
+        <form class="form text-style">
+          <input type="text" name="first-name" id="first-name" placeholder="First Name"/>
+          <input type="text" name="last-name" id="last-name" placeholder="Last Name"/>
+          <input type="email" name="email" id="email" placeholder="Email" autocomplete="email"/>
+          <input type="submit" value="Save Info" id="saveBtn" />
+
+          
+          <input type="text" name="old-password" id="old-password" placeholder="Old Password" autocomplete="current-password"/>
+          <input type="password" name="password" id="password" placeholder="New Password" autocomplete="new-password"/>
+
+          <input type="text" name="conf-password" id="conf-password" placeholder="Confirm Password"/>
+          
+          <input type="submit" value="Change Password" id="saveBtn" />
+
+          <input type="button" value="Logout" id="logoutButton" />
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>&copy Collection Store</p>
+      <p>Designed By Sonu Daryani</p>
+    </footer>
+  </body>
+</html>

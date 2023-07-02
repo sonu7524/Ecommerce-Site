@@ -1,0 +1,99 @@
+<!-- This is the landing page of the website
+The hompage css and js files are attached to it 
+Every time the new user with the deleted local storage comes in this page
+will only rediredt to signup whether we click on Login button or signup button
+
+Once signed up, the page will then only allow us to login with the user name and 
+password stored in the local storage 
+
+The nav bar is will have the specifice tabs on each page
+
+This landing page functionality is to only divert the user to the shop page after
+successfull authentication. Hence its navbar only contains login and signup button
+
+The landing page also highlights one of the product fetched from dummy json website
+Each time we refresh the page we will se new product-->
+
+<!-- Sonu Daryani -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Welocome To Collection Store</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Linking the home-page stylesheet -->
+    <link rel="stylesheet" href="./CSS/home-page.css" />
+
+    <!-- Linking the navbar stylesheet -->
+    <link rel="stylesheet" href="./CSS/navbar.css" />
+
+    <!-- Linking the home-page script -->
+    <script src="./JS/home-page.js" defer></script>
+
+    <!-- Linking the navbar script -->
+    <script src="./JS/navbar.js" defer></script>
+  </head>
+  <body>
+
+    <main class="root">
+      <!-- Navbar HTML -->
+      <nav class="navbar text-style">
+        <div id="logo-box">
+          <div class="material-symbols-outlined" id="menus">menu</div>
+          <div id="logo">Collection Store</div>
+        </div>
+        
+        <div id="links">
+          <div id="home"><a href="./index.html">Home</a></div>
+          <div id="login"><a>Login</a></div>
+          <div id="signup"><a href="./HTML/signup.html">SignUp</a></div>
+          <div id="cart"><a href="./HTML/signup.html">My Cart</a></div>
+          <div id="cart"><a href="./HTML/signup.html">Profile</a></div>
+        </div>
+      </nav>
+
+      <div class="desc-wrapper">
+        <div class="left">
+          <div>
+            <!-- The logo part -->
+            <h1 class="page-heading text-style">Collection Store</h1>
+            <p>Your First Shop built on HTML, CSS AND Javascript</p>
+
+            <!-- The buttons part -->
+            <div class="buttons">
+              <input type="button" value="Login" id="login-button" class="text-style"/>
+              <input type="button" value="Signup" id="signup-button" class="text-style"/>
+            </div>
+          </div>
+
+          <!-- Demo product area -->
+          <!-- <div class="demo-product text-style">
+            <div class="productPoster">
+              <div class="prodImage"></div>
+              <div class="prodTitle"></div>
+              <div class="prodPrice">
+                <div class="priceTag"></div>
+              </div>
+              <div class="prodRating"></div>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- About section area -->
+        <div class="right">
+          <!-- <div class="text-style"> -->
+            <img src="IMAGES/undraw_web_shopping_re_owap 1.png" alt="">
+          <!-- </div> -->
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy Collection Store</p>
+      <p>Designed By Sonu Daryani</p>
+    </footer>
+  </body>
+</html>
